@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -20,45 +19,44 @@ hero:
 
 <div class="vp-doc">
 
-## Available for Spigot, Fabric, and Forge
-Spigot, Fabric, and Forge servers are compatible with both Fabric and Forge clients.
+## Available for Paper, Fabric, Forge, Bungee, and Velocity
+Paper, Fabric, and Forge servers are compatible with both Fabric and Forge clients.
 
 Players need to install the Fabric or Forge mod on the client for the voice chat to work. Players without the mod are still able to join and play as usual.
 
-![](https://imgur.com/dxgaWJ2.png)
+![](/landing/compatability-chart.png)
 
 *Assuming Plasmo Voice is installed on both client and the server*
 
 ## Features
 
-![](https://imgur.com/9MZIepC.png)
+![](/landing/hud-icons.png)
 
-![](https://imgur.com/AtOUfTr.png)
+![](/landing/player-icons.png)
 
-![](https://imgur.com/CGEVrre.png)
+![](/landing/mod-settings.png)
 
-[//]: # (![]&#40;https://imgur.com/DRmG6qP.png&#41;)
+<img src="/landing/visualise-distance.gif" width="1280px" />
 
-<img src="https://imgur.com/xygj7kJ.png" width="1280px">
-
-<img src="https://imgur.com/yF7CGLv.png" width="1280px">
+<img src="/landing/rbm-scroll.gif" width="1280px" />
 
 ## Client features
 - **RNNoise noise reduction.**
 - **OpenAL sound engine, great audio positioning.**
-- **Compressor & Limiter.** Makes loud volume quieter, saving your ears from loud noises.
-- **Compatibility with [Sound Physics Fabric](https://www.curseforge.com/minecraft/mc-mods/sound-physics-fabric) and [Sound Physics Remastered](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered).**
+- **[Sound Physics Remastered](https://modrinth.com/mod/sound-physics-remastered) compatability with [pv-addon-soundphysics](https://modrinth.com/mod/pv-addon-soundphysics).**
 - **Change voice chat distance.**
 - **Optional sound-occlusion.** Muffles the sound if blocks are in the way.
-- **Priority speaking.** Bind a separate push-to-talk button with a greater, adjustable distance. Requires permission.
 - **Select output and input devices.**
 - **Choose between Push to Talk or Voice Activation.**
 - **Optional Directional Sources.** Makes the sound source quieter if it's not looking directly at you.
 - **Choose the position of the GUI icons and toggle the visibility of the player icons.**
 - **Mute and change the volume of the players in the Minecraft social menu.**
 - **Hold `RBM` while looking at the player, and then use the scroll wheel to adjust the volume.**
+- **Stereo Sources.**
+- **Discord-like overlay.**
+- **Smooth volume controls.**
 
-![](https://imgur.com/56clKq4.png)
+![](/landing/keybindings.png)
 
 Check out voice settings by pressing `V`. Make sure you have the right devices selected and your microphone is working.
 
@@ -73,26 +71,47 @@ Check out voice settings by pressing `V`. Make sure you have the right devices s
 - **Voice chat works in singleplayer and when using the Open to LAN feature.**
 - **Placeholder API support.**
 - **Vanish support.**
-- **Proxy support.**
+- **Bungee and Velocity support.**
+- **Advanced API.**
+- **Encryption.**
+
+## Server-side Add-ons
+
+Universal add-ons work on Fabric, Forge and Paper.
+
+Also read: [Add-on Types](https://plasmovoice.com/docs/addons/types)
+
+| Icon                                                                                        | Link                                                                           | Description                                                                                                                                                                                                                    |
+|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [![](https://i.imgur.com/NjGmgGA.png)](https://modrinth.com/mod/pv-addon-soundphysics/)     | [pv-addon-groups](https://modrinth.com/plugin/pv-addon-groups)                 | Create group voice chat channels. Keep talking with players far away.                                                                                                                                                          |
+| [![](https://i.imgur.com/enqKs5d.png)](https://modrinth.com/mod/pv-addon-sculk)             | [pv-addon-sculk](https://modrinth.com/mod/pv-addon-sculk)                      | With this add-on, warden and sculk sensors are triggered with proximity voice chat.                                                                                                                                            |
+| [![](https://i.imgur.com/DZU7wrI.png)](https://modrinth.com/mod/pv-addon-broadcast)         | [pv-addon-broadcast](https://modrinth.com/mod/pv-addon-broadcast)              | Broadcast your voice to all players in the radius, world, server, or proxy.                                                                                                                                                    |
+| [![](https://i.imgur.com/tI24pN7.png)](https://modrinth.com/plugin/pv-addon-spectator)      | [pv-addon-spectator](https://modrinth.com/plugin/pv-addon-spectator)           | With this add-on, all players can hear spectators.                                                                                                                                                                             |
+| [![](https://i.imgur.com/qswCndF.png)](https://modrinth.com/mod/pv-addon-whisper/)          | [pv-addon-whisper](https://modrinth.com/mod/pv-addon-whisper/)                 | By default, whisper is half of the current proximity distance. You can change the percentage in the config.                                                                                                                    |
+| [![](https://i.imgur.com/lRQ0ZEY.png)](https://modrinth.com/mod/pv-addon-priority/)         | [pv-addon-priority](https://modrinth.com/mod/pv-addon-priority/)               | Voice activation with a greater and configurable distance.                                                                                                                                                                     |
+| [![](https://i.imgur.com/GNfK81A.png)](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | [pv-addon-lavaplayer-lib](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | Add-on bundled with LavaPlayer fork library required for some Plasmo Voice add-ons                                                                                                                                             |
+| [![](https://i.imgur.com/LB320On.png)](https://modrinth.com/plugin/pv-addon-discs)          | [pv-addon-discs](https://modrinth.com/plugin/pv-addon-discs)                   | Play audio from Youtube and other sources in Minecraft using music discs. <br/> The addon can stream audio from various sources instead of saving audio files on the server. It even supports YouTube and Twitch live streams. |
+
+## Client Add-ons
+
+| Icon                                                                                    | Link                                                                      | Description                                                                                                                      |
+|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| [![](https://i.imgur.com/NjGmgGA.png)](https://modrinth.com/mod/pv-addon-soundphysics/) | [pv-addon-sound-physics](https://modrinth.com/mod/pv-addon-soundphysics/) | Add compatability with the Sound Physics Remastered mod. <br/> With this add-on, Plasmo Voice will be affected by Sound Physics. |
+| [![](https://i.imgur.com/VTndchu.png)](https://modrinth.com/mod/pv-addon-replaymod/)    | [pv-addon-replaymod](https://modrinth.com/mod/pv-addon-replaymod/)        | A fork of Replay Voice Chat that works with Plasmo Voice allowing you to record voice chat with ReplayMod.                       |
 
 ## Download
 
-- [Plasmo Voice Server on Spigot](https://www.spigotmc.org/resources/plasmo-voice-server.91064/)
 - [Plasmo Voice on Modrinth](https://modrinth.com/mod/plasmo-voice)
 - [Releases](https://github.com/plasmoapp/plasmo-voice/releases/)
 
-## Wiki
-- [Wiki](https://github.com/plasmoapp/plasmo-voice/wiki/)
-- [How to install Server](https://github.com/plasmoapp/plasmo-voice/wiki/How-to-install-Server)
-- [How to install Client](https://github.com/plasmoapp/plasmo-voice/wiki/How-to-install-Client)
-- [Commands & permissions](https://github.com/plasmoapp/plasmo-voice/wiki/Commands-&-permissions)
-- [Troubleshooting and FAQ](https://github.com/plasmoapp/plasmo-voice/wiki/Troubleshooting-&-FAQ)
+## Documentation
+- [Documentation](https://plasmovoice.com)
 
 ## bStats
 
 [![](https://bstats.org/signatures/bukkit/plasmovoice.svg)](https://bstats.org/plugin/bukkit/PlasmoVoice/10928)
 
 ## Credits
-- Originaly made for [Plasmo](https://mc.plo.su)
+- Originally made for [Plasmo](https://rp.plo.su)
 
 </div>
