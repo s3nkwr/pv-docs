@@ -4,28 +4,73 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Plasmo Voice",
   description: "Proximity Voice Chat Mod for Minecraft",
+
+  head: [
+    ['link', { rel: "icon", href: "/favicon.svg"}],
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Documentation', link: '/docs/' }
     ],
 
     logo: '/logo.svg',
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "Documentation",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Overview', link: '/docs/' },
+          { text: 'New in Plasmo Voice 2xx', link: '/docs/new-in-2xx/' },
+        ],
+      },
+      {
+        text: 'Server',
+        items: [
+          { text: 'Installing on a Server', link: '/docs/server/installing/' },
+          { text: 'Advanced Theory', link: '/docs/server/advanced/' },
+          { text: 'Installing on a Proxy', link: '/docs/server/proxy/' },
+          { text: 'DDoS Protection Setup', link: '/docs/server/udp-proxy/' },
+          { text: 'Commands and Permissions', link: '/docs/server/commands/' },
+          { text: 'Placeholder API', link: '/docs/server/papi/' },
         ]
-      }
+      },
+      // {
+      //   text: 'Client',
+      //   items: [
+      //     { text: 'Inherit Activation Type', link: '/addons.html' },
+      //     { text: 'MacOS Microphone Issue', link: '/addon-types.html' },
+      //   ]
+      // },
+      {
+        text: 'Add-ons',
+        items: [
+          { text: 'Add-ons List', link: '/docs/addons/' },
+          { text: 'Types of Add-ons', link: '/docs/addons/types/' },
+        ]
+      },
+      {
+        text: 'API',
+      //   collapsed: true,
+        items: [
+          { text: 'Getting Started', link: '/docs/api/' },
+      //     { text: 'Activations', link: '/addon-types.html' },
+      //     { text: 'Source Lines', link: '/addons.html' },
+      //     { text: 'Events', link: '/addon-types.html' },
+      //     { text: 'Creating Sources', link: '/addons.html' },
+      //     { text: 'Encoding and Decoding', link: '/addon-types.html' },
+      //     { text: 'Encryption and Decryption', link: '/addons.html' },
+      //     { text: 'Sending Packets', link: '/addon-types.html' },
+      //     { text: 'Universal Add-on Features', link: '/addon-types.html' },
+        ]
+      },
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/plasmoapp/plasmo-voice' },
-      { icon: 'discord', link: '#TODO'},
+      { icon: 'discord', link: 'https://discord.com/invite/uueEqzwCJJ'},
       {
         icon: {
           svg: `<svg width="512" height="514" viewBox="0 0 512 514" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +87,7 @@ export default defineConfig({
             <path d="M23.333335 153.93333178V26.0666679h23.46666576v127.8666639z"/>
           </svg>`
         },
-        link: ''
+        link: 'https://www.patreon.com/plasmomc'
       }
     ]
   }
