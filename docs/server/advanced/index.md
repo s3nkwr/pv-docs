@@ -57,7 +57,7 @@ Lets say we have a **Node A**: `111.1.111.111` and **Node B**: `222.2.222.222`
 
 - **Server B** `222.2.222.222:2000`.
 
-With default configuration player will connect to a server via the **Proxy** IP `111.1.111.111:1000`. // TODO factcheck
+With default configuration player will connect to a server via the **Proxy** IP `111.1.111.111:1000`.
 
 When the player connects to **Server B** it will then try to establish a connection with a **Voice Server** using the same IP it used to connect to a **Proxy**.
 

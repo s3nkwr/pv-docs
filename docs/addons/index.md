@@ -1,7 +1,7 @@
 # Add-ons list
 
 ::: tip
-To know the difference between add-on types read: [Types of Add-ons](/addon-types)
+To know the difference between add-on types read: [Types of Add-ons](/docs/addons/types/)
 :::
 
 ## Client

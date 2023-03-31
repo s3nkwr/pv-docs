@@ -82,7 +82,13 @@ port = 0
 
 ### Specify the Servers
 
-First, you need to uncomment the `[servers]` and make a list of all the servers on that you've installed Plasmo Voice. 
+::: tip
+This step is optional. The plugin will use the server configuration from your Bungee/Velocity config. 
+
+You only need to change it if for some reason the IP and Port of the **Voice Server** doesn't match the IP and the port of the **Game Server**.
+:::
+
+You can uncomment `[servers]` to specify a list servers with Plasmo Voice. 
 
 **Key** should match the name of the server in the Velocity / Bungee config. 
 
@@ -90,19 +96,13 @@ IP and ports usually match too, but they can be different if you configured it t
 
 ### Specify the Forwarding Secret
 
-After you've specified the server, you should restart the proxy. // TODO Restart what?
+In the `~/plugins/plasmovoice` folder of the **Proxy** a file called `forwarding-secret` will appear. 
 
-Then, go to each of your **Servers**, into the `~/plugins/plasmovoice/` folder. 
-
-A file called `forwarding-secret` should appear inside the folder.
-
-Paste the `forwardingSecret` value from your **Proxy** config file into the `forwarding-secret` file.
-
-Do this for each of the **Servers**.
+Copy this file into the `~/plugins/plasmovoice/` folders for each of the **Servers** behind the proxy.
 
 You can also use the `PLASMO_VOICE_FORWARDING_SECRET` environment variable. The environment variable has a higher priority than the file. 
 
-// TODO Restart what?
+Restart each **Server** after specifying the **Forwarding Secret**.
 
 ### Configuring Host
 
