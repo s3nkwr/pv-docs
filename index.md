@@ -34,7 +34,7 @@ Players need to install the Fabric or Forge mod on the client for the voice chat
 
 ![](/landing/player-icons.png)
 
-![](/landing/mod-settings.png)
+![](/landing/voice-settings.png)
 
 <img src="/landing/visualise-distance.gif" width="1280px" />
 
@@ -83,7 +83,7 @@ Also read: [Add-on Types](https://plasmovoice.com/docs/addons/types)
 
 | Icon                                                                                        | Link                                                                           | Description                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [![](https://i.imgur.com/NjGmgGA.png)](https://modrinth.com/mod/pv-addon-soundphysics/)     | [pv-addon-groups](https://modrinth.com/plugin/pv-addon-groups)                 | Create group voice chat channels. Keep talking with players far away.                                                                                                                                                          |
+| [![](https://i.imgur.com/mKJDsiC.png)](https://modrinth.com/mod/pv-addon-groups/)           | [pv-addon-groups](https://modrinth.com/plugin/pv-addon-groups)                 | Create group voice chat channels. Keep talking with players far away.                                                                                                                                                          |
 | [![](https://i.imgur.com/enqKs5d.png)](https://modrinth.com/mod/pv-addon-sculk)             | [pv-addon-sculk](https://modrinth.com/mod/pv-addon-sculk)                      | With this add-on, warden and sculk sensors are triggered with proximity voice chat.                                                                                                                                            |
 | [![](https://i.imgur.com/DZU7wrI.png)](https://modrinth.com/mod/pv-addon-broadcast)         | [pv-addon-broadcast](https://modrinth.com/mod/pv-addon-broadcast)              | Broadcast your voice to all players in the radius, world, server, or proxy.                                                                                                                                                    |
 | [![](https://i.imgur.com/tI24pN7.png)](https://modrinth.com/plugin/pv-addon-spectator)      | [pv-addon-spectator](https://modrinth.com/plugin/pv-addon-spectator)           | With this add-on, all players can hear spectators.                                                                                                                                                                             |
