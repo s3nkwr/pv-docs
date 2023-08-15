@@ -69,8 +69,6 @@ First, download the plugin for Bungee or Velocity from [Modrinth](https://modrin
 Then open the Plasmo Voice **Proxy** config.
 
 ```toml
-forwardingSecret = "656c11a7-7759-4c1b-ac27-ebb78d05ab77"
-
 [host]
 ip = "0.0.0.0"
 port = 0
