@@ -9,6 +9,10 @@ export default defineConfig({
     ['link', { rel: "icon", href: "/favicon.svg"}],
   ],
 
+  markdown: {
+    theme: "github-dark"
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -56,10 +60,13 @@ export default defineConfig({
       //   collapsed: true,
         items: [
           { text: 'Getting Started', link: '/docs/api/' },
-      //     { text: 'Activations', link: '/addon-types.html' },
-      //     { text: 'Source Lines', link: '/addons.html' },
-      //     { text: 'Events', link: '/addon-types.html' },
-      //     { text: 'Creating Sources', link: '/addons.html' },
+          { text: 'Events', link: '/docs/api/events' },
+          { text: 'Activations', link: '/docs/api/activations' },
+          { text: 'Source Lines', link: '/docs/api/source-lines' },
+          { text: 'Sources', link: '/docs/api/sources' },
+          { text: 'Encoding & Encryption', link: '/docs/api/encoding-and-encryption' },
+          { text: 'Languages', link: '/docs/api/languages' },
+          { text: 'Dokka', link: 'https://dokka.plasmovoice.com' }
       //     { text: 'Encoding and Decoding', link: '/addon-types.html' },
       //     { text: 'Encryption and Decryption', link: '/addons.html' },
       //     { text: 'Sending Packets', link: '/addon-types.html' },

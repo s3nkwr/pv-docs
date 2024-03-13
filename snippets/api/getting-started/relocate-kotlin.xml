@@ -1,0 +1,36 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.1</version>
+                <executions>
+                    <execution>
+                        <id>shade</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <relocations>
+                        <relocation>
+                            <pattern>kotlin</pattern>
+                            <shadedPattern>su.plo.voice.libs.kotlin</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>kotlinx.coroutines</pattern>
+                            <shadedPattern>su.plo.voice.libs.kotlinx.coroutines</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>kotlinx.serialization</pattern>
+                            <shadedPattern>su.plo.voice.libs.kotlinx.serialization</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
