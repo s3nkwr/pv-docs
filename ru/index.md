@@ -92,7 +92,7 @@ hero:
 | [![](https://i.imgur.com/GNfK81A.png)](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | [pv-addon-lavaplayer-lib](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | Аддон с библиотекой LavaPlayer fork, необходимой для некоторых аддонов Plasmo Voice                                                                                                                                                                                        |
 | [![](https://i.imgur.com/LB320On.png)](https://modrinth.com/plugin/pv-addon-discs)          | [pv-addon-discs](https://modrinth.com/plugin/pv-addon-discs)                   | Воспроизводите аудио из Youtube и других источников в Minecraft с помощью музыкальных дисков. <br/> Аддон может воспроизводить звук из различных источников вместо того, чтобы сохранять аудиофайлы на сервере. Он даже поддерживает прямые трансляции с YouTube и Twitch. |
 
-## Аддоны для клиента
+## Клиентские аддоны
 
 | Icon                                                                                    | Link                                                                      | Description                                                                                                                      |
 |-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|

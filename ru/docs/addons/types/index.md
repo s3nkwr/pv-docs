@@ -1,40 +1,40 @@
-# Types of Add-ons
+# Типы аддонов
 
-## Client
+## Клиентские
 
-Client add-ons add new features to the client. You don't need to install client add-ons on the server.
+Клиентские аддоны добавляют новые функции в клиент. Вам не нужно устанавливать клиентские аддоны на сервер.
 
-A single file supports both Forge and Fabric.
+Один файл поддерживает и Forge, и Fabric.
 
-::: info Installation
-Add the add-on into the `~/mods` folder.
+::: info Установка
+Добавьте аддон в папку `~/mods`.
 :::
 
-## Universal
+## Универсальные
 
-Add-ons marked as universal are server-side only.
+Аддоны, отмеченные как универсальные, работают только на стороне сервера.
 
-You only need to install it on the server and the feature will work for all the players with Plasmo Voice.
+Вам нужно только установить его на сервер, и функция будет работать для всех игроков с Plasmo Voice.
 
-*All* universal add-ons work on Spigot, Fabric and Forge.
+*Все* универсальные дополнения работают на Spigot, Fabric и Forge.
 
-*Some* can be also installed as Bungee or Velocity plugins.
+*Некоторые* из них могут быть установлены как плагины Bungee или Velocity.
 
-::: info On Fabric or Forge
-Add the add-on into the `~/mods` folder.
+::: info На Fabric и Forge
+Добавьте аддон в папку `~/mods`.
 :::
 
-::: info On Spigot, Bungee or Velocity
-Add the add-on into the `~/plugins` folder.
+::: info На Spigot, Bungee или Velocity
+Добавьте аддон в папку `~/plugins`.
 :::
 
-Note that you can install the add-on on Bungee or Velocity only if add-on description says you can.
+Обратите внимание, что установить аддон на Bungee или Velocity можно только в том случае, если в описании аддона указано, что это возможно.
 
-## Other
+## Другое
 
-Add-ons not marked as universal or client may work differently.
+Аддоны, не отмеченные как универсальные или клиентские, могут работать по-другому.
 
-For example, they can be exclusive to a certain platform, or have different files of a different platform.
+Например, они могут быть эксклюзивными для определенной платформы или иметь другие файлы для другой платформы.
 
-Read the add-on description to figure out how to install it and what platforms are supported. 
+Прочитайте описание аддоны, чтобы узнать, как его установить и какие платформы поддерживаются. 
 
