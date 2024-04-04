@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import {search as ruSearch} from "./ru";
 
-
 export const shared = defineConfig({
     title: "Plasmo Voice",
     description: "Proximity Voice Chat Mod for Minecraft",
@@ -14,16 +13,6 @@ export const shared = defineConfig({
     head: [
         ['link', { rel: "icon", href: "/favicon.svg"}],
     ],
-
-    // @ts-ignore
-    search: {
-        provider: 'local',
-        options: {
-            locales: {
-                ruSearch
-            }
-        }
-    },
 
     themeConfig: {
         logo: '/logo.svg',

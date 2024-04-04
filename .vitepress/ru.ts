@@ -11,8 +11,8 @@ export const ru = defineConfig({
             {
                 text: "Документация",
                 items: [
-                    { text: 'Overview', link: '/ru/docs/' },
-                    { text: 'New in Plasmo Voice 2xx', link: '/ru/docs/new-in-2xx/' },
+                    { text: 'Обзор', link: '/ru/docs/' },
+                    { text: 'Новое в Plasmo Voice 2xx', link: '/ru/docs/new-in-2xx/' },
                 ],
             },
             {
@@ -78,7 +78,7 @@ export const ru = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
     return [
-        { text: 'Домой', link: '/ru' },
+        { text: 'Домой', link: '/ru/' },
         { text: 'Документация', link: '/ru/docs/' }
     ]
 }
