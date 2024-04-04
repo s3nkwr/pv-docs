@@ -1,32 +1,32 @@
-# New in 2xx
+# Новое в 2xx
 
 ## TLDR
 
-Complete rewrite with LGPL License, advanced API, ten official add-ons, groups, replay mod support, Bungee/Velocity plugins, stereo, new icons, new menu, better sound quality, and encryption.
+Полная переработка с лицензией LGPL, расширенный API, десять официальных аддонов, группы, поддержка Replay Mod, плагины Bungee/Velocity, стерео, новые иконки, новое меню, лучшее качество звука и шифрование.
 
-Go get it. It's good. Trust me, bro. You can find it on Modrinth: https://modrinth.com/mod/plasmo-voice
+Сходите и скачайте. Он отличный. Поверь мне, братишка. Вы можете найти его на Modrinth: https://modrinth.com/mod/plasmo-voice.
 
-## Bungee And Velocity Plugins
+## Плагины Bungee и Velocity
 
-With a Bungee or Velocity plugin, you can use just one public UDP port and create add-ons that work on all servers connected to the proxy.
+С помощью плагина Bungee или Velocity вы можете использовать только один публичный UDP-порт и создавать аддоны, которые будут работать на всех серверах, подключенных к прокси.
 
-For instance, with the [pv-addon-broadcast](/docs/addons/#pv-addon-broadcast), you can broadcast audio to all the players connected to the proxy.
+Например, с помощью [pv-addon-broadcast](/ru/docs/addons/#pv-addon-broadcast) вы можете транслировать звук всем игрокам, подключенным к прокси.
 
-Also, the [pv-addon-groups](/docs/addons/#pv-addon-groups) enables players from different servers to join a single voice group channel.
+Также [pv-addon-groups](/ru/docs/addons/#pv-addon-groups) позволяет игрокам с разных серверов присоединиться к одному каналу голосовой группы.
 
-Read: [Installing on a Proxy](/docs/server/proxy/)
+Читайте: [Установка на прокси](/ru/docs/server/proxy/)
 
-## Stereo Sources
+## Стерео источники
 
 For a long time, we couldn't figure out why the sound quality of the music was so bad in Plasmo Voice.
 
-Turns out the answer is simple: **Stereo!**
+Оказывается, ответ прост: **Стерео!**
 
-We added stereo sources that allow you to stream audio in *perfect* quality.
+Мы добавили стерео источники, которые позволяют передавать потоковое аудио в *идеальном* качестве.
 
-Listen to a demo with [pv-addon-discs](/docs/addons/#pv-addon-discs).
+Прослушайте демо-версию с помощью [pv-addon-discs](/ru/docs/addons/#pv-addon-discs).
 
-### Mono Source
+### Моно источник
 
 <p> </p>
 
@@ -34,7 +34,7 @@ Listen to a demo with [pv-addon-discs](/docs/addons/#pv-addon-discs).
     <source src="/new-in-2xx/mono.webm">
 </video>
 
-### Stereo Source
+### Стерео источники
 
 <p> </p>
 
@@ -42,81 +42,81 @@ Listen to a demo with [pv-addon-discs](/docs/addons/#pv-addon-discs).
     <source src="/new-in-2xx/stereo.webm">
 </video>
 
-The downside of **Stereo Sources** is that they don't have panning.
+Минусом **Стерео источников** является то, что они не имеют функции панорамирования.
 
-The audio level doesn't change when you rotate the camera and only fades in with the distance.
+Уровень звука не меняется при повороте камеры и только затухает с расстоянием.
 
-However, if you prefer realism and immersion over sound quality, you can turn on `Mono Stereo Sources` in the mod settings.
+Однако если вы предпочитаете реализм и погружение, а не качество звука, вы можете включить опцию `Моно стерео источники` в настройках мода.
 
-This option will convert all **Stereo Sources** to **Mono Sources** on the client.
+Эта опция преобразует все **Стерео источники** в **Моно источники** на клиенте.
 
-## Permissions Sync
+## Синхронизация разрешений
 
-In 1xx after your permissions have changed — you need to rejoin the server for permissions to update. There were also a lot of bugs with incorrect icons due to permissions.
+В 1xx после изменения прав доступа вам нужно заново зайти на сервер, чтобы права обновились. Также было много ошибок с неправильными иконками из-за прав доступа.
 
-Now the permissions are synced instantly.
+Теперь разрешения синхронизируются мгновенно.
 
-## New Icons
+## Новые иконки
 
-Now you can tell apart the `Client Mute` and `Server Mute` icons.
+Теперь вы можете различать значки `Client Mute` и `Server Mute`.
 
-There is also a new `Player Muted Audio` icon. This icon indicates that the player disabled voice chat on the client.
+Также появился новый значок `Player Muted Audio`. Этот значок указывает на то, что игрок отключил голосовой чат на клиенте.
 
 ![](/new-in-2xx/player-icons.png)
 
 ![](/new-in-2xx/hud-icons.png)
 
-## New Menu
+## Новое меню
 
-With a ton of new features, we had to rethink the menu again.
+С кучей новых функций нам пришлось пересмотреть меню.
 
-We replaced the `General` category with four new ones: `Devices`, `Volume`, `Activation`, and `Overlay`.
+Мы заменили категорию `General` с 4 новыми: `Devices`, `Volume`, `Activation`, и `Overlay`.
 
-There is also a new `Add-ons` category and many visual and usability improvements.
+Также появилась новая категория `Add-ons` и множество визуальных и пользовательских улучшений.
 
 ![](/new-in-2xx/devices-tab.png)
 
-### Volume Tab
+### Вкладка звуков
 
-The new volume tab enables you to adjust the audio levels of each add-on separately.
+Новая вкладка `Громкость` позволяет регулировать уровень звука каждого дополнения отдельно.
 
-We've also moved the player volume controls to this tab from the Social Menu.
+Мы также перенесли управление громкостью игроков на эту вкладку из Социального меню.
 
-We made this decision because Mojang added more buttons to the Social Menu, making it cluttered with too many buttons.
+Мы приняли это решение, потому что Mojang добавила больше кнопок в Социальное меню, в результате чего оно стало слишком загроможденным.
 
 ![](/new-in-2xx/volume-tab.png)
 
-### Activation Tab
+### Вкладка активации
 
-Add-ons can create **Activations** that you can use to talk.
+Аддоны могут создавать **Активации** которые вы можете использовать для разговоров.
 
-For example, there is an **Activation** for a default `Proximity` voice chat, and also a separate **Activation** for the `Groups` voice chat.
+Например, есть **Активация** для голосового чата по умолчанию `Proximity`, а также отдельная **Активация** для `Groups`.
 
-You can set an **Activation** to different modes: `Push-to-Talk`, `Voice Activation`, and `Inherit`.
+Вы можете установить **Активацию** в различные режимы: `Push-to-Talk`, `Voice Activation`, and `Inherit`.
 
-`Inherit` mode means `Inherit from Proximity`. **Activations** with this mode will be activated when you use the `Proximity` **Activation**.
+Режим `Inherit` означает `Наследовать от Proximity`. **Активации** с этим режимом будут активированы при использовании `Proximity`.
 
-Useful if you want to use multiple **Activations** with a single button. For example, to talk in a group and proximity at the same time.
+Полезно, если вы хотите использовать несколько **активаций** с помощью одной кнопки. Например, для разговора в группе и одновременной близости.
 
 ![](/new-in-2xx/activation-tab.png)
 
-### Overlay Tab
+### Вкладка оверлей
 
-Here you can configure old HUD and Player icons.
+Здесь вы можете настроить старые иконки HUD и игрока.
 
-And also enable a new [Discord-like overlay](/docs/new-in-2xx/#stereo-source) that shows you the sources you hear.
+А также включить новый [Discord-like оверлей](/ru/docs/new-in-2xx/#стерео-источники), который показывает источники, которые вы слышите.
 
 ![](/new-in-2xx/overlay-tab.png)
 
-### Add-ons Tab
+### Вкладка аддоны
 
-Add-ons can add custom settings to the menu. At the moment it's only used in [pv-addon-soundphysics](/docs/addons/#pv-addon-sound-physics).
+Дополнения могут добавлять пользовательские настройки в меню. На данный момент он используется только в [pv-addon-soundphysics](/ru/docs/addons/#pv-addon-sound-physics).
 
-## Add-ons and API
+## Аддоны и API
 
-The biggest change of them all. With the new Plasmo Voice API, the possibilities are endless.
+Самое большое изменение из всех. С новым голосовым API PlasmoVoice возможности безграничны.
 
-We already mentioned some new add-ons through this post, but in total, we already made **10 official add-ons**.
+Мы уже упоминали о некоторых новых аддонов в этой статье, но в общей сложности мы уже сделали **10 официальных аддонов**.
 
 - pv-addon-groups
 - pv-addon-sculk
@@ -129,11 +129,11 @@ We already mentioned some new add-ons through this post, but in total, we alread
 - pv-addon-sound-physics
 - pv-addon-replaymod
 
-Go check them out to see our new API in action: [Add-ons List](/docs/addons/)
+Посмотрите на них, чтобы увидеть наш новый API в действии: [Add-ons List](/ru/docs/addons/)
 
-### API Features
+### Возможности API
 
-- Create activations.
+- Создание активаций.
 - Create source lines.
 - Create audio sources.
   - Player source.
@@ -146,35 +146,36 @@ Go check them out to see our new API in action: [Add-ons List](/docs/addons/)
 - Custom config framework.
 
 
-### API Documentation
+### Документация API
 
-Coming soon™.
+~~Coming soon™.~~
+
+Она вышла: [Документация](/ru/docs/api/)
 
 
+## Ползунок экспоненциальной громкости
 
-## Exponential Volume Slider
+Регулировка громкости должна ощущаться гораздо плавнее и мягче.
 
-Volume adjustments should feel much smoother and gradual.
+То же самое с позиционным затуханием звука.
 
-Same with positional audio fading.
+Можно отключить в расширенных настройках.
 
-Can be disabled in the advanced settings.
+## Качество звука
 
-## Sound Quality
+В этой версии мы исправили множество ошибок, которые влияли на качество звука.
 
-We fixed a lot of bugs that affected the sound quality in this version.
+Больше никаких странных *пиканий* или *тресков*. По крайней мере, я на это надеюсь.
 
-No more weird *popping* or *cracking*. At least I hope so.
+Например, был исправлен "баг с задержкой звука". Например, когда вы слышали последний слог звука при втором нажатии на кнопку активации.
 
-For example, the "Trailing audio bug" was also fixed. Like when you could hear the last syllable of the audio the second time the activation was pressed.
+## Шифрование
 
-## Encryption
+Голосовой чат теперь зашифрован. Шифрование также работает в offline-mode серверах.
 
-Voice chat is now encrypted. Encryption also works with offline mode.
+## Переводы Crowdin
 
-## Crowdin
-
-Crowdin integration will pull translations from Crowdin as soon as they are approved. Easy to translate, easy to use.
+Интеграция с Crowdin позволит получать переводы из Crowdin, как только они будут одобрены. Легко переводить, легко использовать.
 
 https://crowdin.com/project/plasmo-voice
 
