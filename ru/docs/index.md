@@ -1,5 +1,5 @@
-# Plasmo Voice Documentation 
+# Документация Plasmo Voice 
 
-If you are having problems installing Plasmo Voice on the server, read: [Installing on The Server](/docs/server/installing/).
+Если у вас возникли проблемы с установкой Plasmo Voice на сервер, прочитайте: [Установка на сервер](/ru/docs/server/installing/).
 
-Also checkout the [Add-ons List](/docs/addons/).
+Также посмотрите [Список аддонов](/ru/docs/addons/).

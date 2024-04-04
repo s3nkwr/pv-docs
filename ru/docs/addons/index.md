@@ -1,10 +1,10 @@
-# Add-ons list
+# Список аддонов
 
 ::: tip
-To know the difference between add-on types read: [Types of Add-ons](/docs/addons/types/)
+Чтобы узнать разницу между типами аддонов, прочитайте: [Типы аддонов](/ru/docs/addons/types/)
 :::
 
-## Client
+## Клиент
 
 ---
 
@@ -12,9 +12,9 @@ To know the difference between add-on types read: [Types of Add-ons](/docs/addon
 
 ### pv-addon-sound-physics
 
-Add compatability with the [Sound Physics Remastered](https://modrinth.com/mod/sound-physics-remastered) mod.
+Добавляет поддержку мода [Sound Physics Remastered](https://modrinth.com/mod/sound-physics-remastered).
 
-With this add-on, Plasmo Voice will be affected by Sound Physics.
+С этим дополнением Sound Physics будет влиять на Plasmo Voice.
 
 [Modrinth](https://modrinth.com/mod/pv-addon-soundphysics/)
 
@@ -24,11 +24,11 @@ With this add-on, Plasmo Voice will be affected by Sound Physics.
 
 ### pv-addon-replaymod
 
-A fork of Replay Voice Chat that works with Plasmo Voice allowing you to record voice chat with ReplayMod.
+Форк Replay Voice Chat, работающий с Plasmo Voice и позволяющий записывать разговоры с помощью ReplayMod.
 
 [Modrinth](https://modrinth.com/mod/pv-addon-replaymod/)
 
-## Universal
+## Универсальные
 
 ---
 
@@ -36,10 +36,10 @@ A fork of Replay Voice Chat that works with Plasmo Voice allowing you to record 
 
 ### pv-addon-groups
 
-Create group voice chat channels. Keep talking with players far away.
+Создавайте групповые каналы голосового чата. Общайтесь с игроками на расстоянии.
 
-::: tip Bungee and Velocity Support 
-Groups will work between servers if you install the add-on as a Bungee or Velocity plugin
+::: tip Поддержка Bungee и Velocity
+Группы будут работать между серверами, если вы установите аддон как плагин Bungee или Velocity.
 :::
 
 [Modrinth](https://modrinth.com/plugin/pv-addon-groups)
@@ -50,7 +50,7 @@ Groups will work between servers if you install the add-on as a Bungee or Veloci
 
 ### pv-addon-sculk
 
-With this add-on, warden and sculk sensors are triggered with proximity voice chat.
+С помощью этого аддона Скалк сенсоры и Надзиратель активируются при разговорах в голосовом чате.
 
 [Modrinth](https://modrinth.com/mod/pv-addon-sculk)
 
@@ -60,10 +60,10 @@ With this add-on, warden and sculk sensors are triggered with proximity voice ch
 
 ### pv-addon-broadcast
 
-Broadcast your voice to all players in the radius, world, server, or proxy.
+Транслируйте свой голос всем игрокам в радиусе, мире, на сервере или прокси.
 
-::: tip Bungee and Velocity Support
-You'll be able to set the broadcast scope to all servers on the proxy if you install the add-on as a Bungee or Velocity plugin
+::: tip Поддержка Bungee и Velocity
+Вы сможете установить область вещания на все сервера, если установите дополнение как плагин Bungee или Velocity.
 :::
 
 [Modrinth](https://modrinth.com/mod/pv-addon-broadcast)
@@ -72,7 +72,7 @@ You'll be able to set the broadcast scope to all servers on the proxy if you ins
 
 [![pv-addon-spectator](/addon_logo/spectator.png)](https://github.com/plasmoapp/pv-addon-spectator)
 
-With this add-on, all players can hear spectators.
+С помощью этого дополнения все игроки могут слышать спектаторов.
 
 ### pv-addon-spectator
 
@@ -84,7 +84,7 @@ With this add-on, all players can hear spectators.
 
 ### pv-addon-whisper
 
-By default, whisper is half of the current proximity distance. You can change the percentage in the config.
+По умолчанию шепот равен половине текущего расстояния голоса. Вы можете изменить процент в конфигурации.
 
 [Modrinth](https://modrinth.com/mod/pv-addon-whisper/)
 
@@ -94,7 +94,7 @@ By default, whisper is half of the current proximity distance. You can change th
 
 ### pv-addon-priority
 
-Voice activation with a greater and configurable distance.
+Трансляция голоса с большим и настраиваемым расстоянием.
 
 [Modrinth](https://modrinth.com/mod/pv-addon-priority/)
 
@@ -104,13 +104,13 @@ Voice activation with a greater and configurable distance.
 
 ### pv-addon-lavaplayer-lib
 
-Add-on bundled with LavaPlayer fork library required for some Plasmo Voice add-ons
+Аддон с библиотекой LavaPlayer fork, необходимой для некоторых аддонов Plasmo Voice
 
 [Modrinth](https://modrinth.com/plugin/pv-addon-lavaplayer-lib)
 
 ## Paper
 
-Only works on Paper and its forks.
+Работает только на Paper и его форках.
 
 ---
 
@@ -118,9 +118,9 @@ Only works on Paper and its forks.
 
 ### pv-addon-discs
 
-Play audio from Youtube and other sources in Minecraft using music discs.
+Воспроизводите аудио из Youtube и других источников в Minecraft с помощью музыкальных дисков.
 
-The addon can stream audio from various sources instead of saving audio files on the server. It even supports YouTube and Twitch live streams.
+Аддон может воспроизводить звук из различных источников вместо того, чтобы сохранять аудиофайлы на сервере. Он даже поддерживает прямые трансляции с YouTube и Twitch.
 
 [Modrinth](https://modrinth.com/plugin/pv-addon-discs)
 

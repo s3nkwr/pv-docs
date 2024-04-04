@@ -89,7 +89,7 @@ hero:
 | [![](https://i.imgur.com/tI24pN7.png)](https://modrinth.com/plugin/pv-addon-spectator)      | [pv-addon-spectator](https://modrinth.com/plugin/pv-addon-spectator)           | С помощью этого дополнения все игроки могут слышать спектаторов.                                                                                                                                                                                                           |
 | [![](https://i.imgur.com/qswCndF.png)](https://modrinth.com/mod/pv-addon-whisper/)          | [pv-addon-whisper](https://modrinth.com/mod/pv-addon-whisper/)                 | По умолчанию шепот равен половине текущего расстояния голоса. Вы можете изменить процент в конфигурации.                                                                                                                                                                   |
 | [![](https://i.imgur.com/lRQ0ZEY.png)](https://modrinth.com/mod/pv-addon-priority/)         | [pv-addon-priority](https://modrinth.com/mod/pv-addon-priority/)               | Трансляция голоса с большим и настраиваемым расстоянием.                                                                                                                                                                                                                   |
-| [![](https://i.imgur.com/GNfK81A.png)](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | [pv-addon-lavaplayer-lib](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | Аддон с библиотекой LavaPlayer fork, необходимой для некоторых дополнений Plasmo Voice                                                                                                                                                                                     |
+| [![](https://i.imgur.com/GNfK81A.png)](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | [pv-addon-lavaplayer-lib](https://modrinth.com/plugin/pv-addon-lavaplayer-lib) | Аддон с библиотекой LavaPlayer fork, необходимой для некоторых аддонов Plasmo Voice                                                                                                                                                                                        |
 | [![](https://i.imgur.com/LB320On.png)](https://modrinth.com/plugin/pv-addon-discs)          | [pv-addon-discs](https://modrinth.com/plugin/pv-addon-discs)                   | Воспроизводите аудио из Youtube и других источников в Minecraft с помощью музыкальных дисков. <br/> Аддон может воспроизводить звук из различных источников вместо того, чтобы сохранять аудиофайлы на сервере. Он даже поддерживает прямые трансляции с YouTube и Twitch. |
 
 ## Аддоны для клиента
@@ -105,7 +105,7 @@ hero:
 - [Релизы на GitHub](https://github.com/plasmoapp/plasmo-voice/releases/)
 
 ## Документация
-- [Документация](/ru/docs/)
+- [Документация](https://plasmovoice.com/ru/docs/)
 
 ## bStats
 
