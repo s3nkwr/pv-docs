@@ -1,16 +1,16 @@
-# Commands & Permissions
+# Команды & Разрешения
 
-List of all the commands & permissions.
+Список всех команд и разрешений.
 
-Command and aliases | Description                                         | Permission                | Default
------------- |-----------------------------------------------------|---------------------------| ------------- 
-`/vmute <player> [duration] [reason]` | Mute player on the server                           | `pv.mute`                 | op
-`/vunmute <player>` | Unmute player on the server                         | `pv.unmute`               | op
-`/vreload` | Reload the plugin                                   | `pv.reload`               | op
-`/vreconnect` | Reconnect the client                                | `pv.reconnect`            | true
-`/vlist` | Show the list of players with the mod installed     | `pv.list`                 | true
-`none` | Allows user to use the default proximity voice chat | `pv.activation.proximity` | true
+| Команды                               | Описание                                                        | Разрешение                | Выдано по умолчанию |
+|---------------------------------------|-----------------------------------------------------------------|---------------------------|---------------------|
+| `/vmute <player> [duration] [reason]` | Замутить игрока на сервере                                      | `pv.mute`                 | op                  |
+| `/vunmute <player>`                   | Размутить игрока на сервере                                     | `pv.unmute`               | op                  |
+| `/vreload`                            | Перезагрузить плагин                                            | `pv.reload`               | op                  |
+| `/vreconnect`                         | Переподключение клиента к Войс серверу                          | `pv.reconnect`            | true                |
+| `/vlist`                              | Показать список игроков с установленным модом                   | `pv.list`                 | true                |
+| `none`                                | Позволяет пользователю использовать голосовой чат по умолчанию. | `pv.activation.proximity` | true                |
 
 ::: tip
 
-You can set `pv.activation.*` to `false` to prevent players from talking completely. 
+Вы можете поставить `pv.activation.*` на `false` чтобы игроки не могли разговаривать полностью.

@@ -1,117 +1,116 @@
-# Installing on a Proxy
+# Установка на Прокси
 
 ::: tip
 
-It's highly recommended to read the [Advanced Theory](/docs/server/advanced/) page first.
+Настоятельно рекомендуется сначала прочитать статью [Продвинутая теория](/ru/docs/server/advanced/).
 
-Or *at least* the [Terminology](/docs/server/advanced/#terminology) part of it.
+Или *по крайней мере* часть [Терминология](/ru/docs/server/advanced/#терминология).
 
 :::
 
-## Introduction
+## Введение
 
-You can use Plasmo Voice with Bungee or Velocity in two different ways:
+Вы можете использовать Plasmo Voice с Bungee или Velocity двумя разными способами:
 
-- Install Plasmo Voice on each **Server** behind the **Proxy**.
-- Install Plasmo Voice on **Proxy** using Bungee or Velocity plugin.
+- Установить Plasmo Voice на каждый **сервер** за **прокси**.
+- Установить Plasmo Voice на **Прокси**, используя плагин Bungee или Velocity.
 
-The first way is more simple.
+Первый способ более прост.
 
-The second way gives you more features, such as:
+Второй способ дает больше возможностей, например:
 
-- You only need one public UDP port.
-- You can install Plasmo Voice add-ons on the proxy.
-  - For example, if you install `pv-addon-groups` on the proxy, then the groups will work between servers. 
-  - Only works with add-ons that explicitly support it.
+- Вам нужен только один публичный UDP-порт.
+- Вы можете устанавливать дополнения Plasmo Voice на прокси.
+  - Например, если вы установите `pv-addon-groups` на прокси, то группы будут работать между серверами.
+  - Работает только с теми дополнениями, которые поддерживают эту функцию.
 
-Before using the **Proxy** plugin you **still** need to install Plasmo Voice on each **Server** behind the **Proxy**, so we'll start with that.
+Перед использованием плагина на **Прокси** вам **все еще** нужно установить Plasmo Voice на каждый **сервер** за **Прокси**, поэтому мы начнем с этого.
 
-## Installing on each Server behind the Proxy
+## Установка на каждый сервер за прокси-сервером
 
-You can follow the normal installation guide.
+Вы можете следовать обычному руководству по установке.
 
-Just download the plugin and install it into the `~/plugins` folder on each of your **Servers**.
+Просто скачайте плагин и установите его в папку `~/plugins` на каждом из ваших **серверов**.
 
-Besides that, there are a few caveats that you should keep in mind. 
+Кроме того, есть несколько предостережений, которые вы должны иметь в виду.
 
-### Each Server should have a different port
+### Каждый сервер должен иметь свой порт.
 
-Multiple servers can't share a single port.
+Несколько серверов не могут использовать один порт.
 
-Use a different UDP port for each **Server**.
+Используйте отдельный UDP-порт для каждого **сервера**.
 
-Make sure that each port is open.
+Убедитесь, что каждый порт открыт.
 
-### Proxy and Server on different Nodes
+### Прокси и сервер на разных нодах
 
-If your **Proxy** and **Server** are located on different **Nodes** you need to change the **Public IP** in the Plasmo Voice config on the **Server**.
+Если ваши **Proxy** и **Server** расположены на разных **Нодах**, вам нужно изменить **Public IP** в конфигурации Plasmo Voice на **Server**.
 
 ::: tip
-More info with an example in [Advanced Theory](/docs/server/advanced/).
+Больше информации с примером в [Продвинутой теории](/ru/docs/server/advanced/).
 :::
 
 ```toml
 [host]
 ip = "0.0.0.0"
-port = 0
+порт = 0
 
 [host.public]
-ip = "222.2.222.222" # IP of the Server
-port = 2000 # Port of the Server
+ip = "222.2.222.222" # IP сервера
+port = 2000 # Порт сервера
 ```
 
-By this point, the voice chat should work. But you might want to stick around to install the **Proxy** plugin to get more features. 
+На этом этапе войс чат должен работать. Но вы, возможно, захотите установить плагин **Прокси**, чтобы получить больше возможностей. 
 
-## Installing the Proxy plugin
+## Установка плагина на Прокси
 
-First, download the plugin for Bungee or Velocity from [Modrinth](https://modrinth.com/plugin/plasmo-voice/versions), drop it into the `~/plugins` folder, and restart the server. 
+Сначала скачайте плагин для Bungee или Velocity с сайта [Modrinth](https://modrinth.com/plugin/plasmo-voice/versions), закиньте его в папку `~/plugins` и перезапустите сервер. 
 
-Then open the Plasmo Voice **Proxy** config.
+Затем откройте конфиг Plasmo Voice на **прокси**.
+
 
 ```toml
 [host]
 ip = "0.0.0.0"
-port = 0
+порт = 0
 
 # [servers]
 # farmworld = "127.0.0.1:25565"
 # overworld = "127.0.0.1:25566"
 ```
 
-### Specify the Servers
+### Укажите серверы
 
 ::: tip
-This step is optional. The plugin will use the server configuration from your Bungee/Velocity config. 
+Этот шаг необязателен. Плагин будет использовать конфиг сервера из вашего Bungee/Velocity.
 
-You only need to change it if for some reason the IP and Port of the **Voice Server** doesn't match the IP and the port of the **Game Server**.
+Вам нужно изменить ее только в том случае, если по какой-то причине IP и порт **Войс сервера** не совпадают с IP и портом **Игрового сервера**.
 :::
 
-You can uncomment `[servers]` to specify a list servers with Plasmo Voice. 
+Вы можете отменить `[servers]`, чтобы указать список серверов с Plasmo Voice.
 
-**Key** should match the name of the server in the Velocity / Bungee config. 
+**Ключ** должен совпадать с именем сервера в конфиг Velocity / Bungee.
 
-IP and ports usually match too, but they can be different if you configured it that way.
+IP и порты обычно тоже совпадают, но могут быть и другими, если вы настроили их таким образом.
 
-### Specify the Forwarding Secret
+### Укажите Forwarding Secret
+В папке `~/plugins/plasmovoice` на **Прокси** появится файл под названием `forwarding-secret`.
 
-In the `~/plugins/plasmovoice` folder of the **Proxy** a file called `forwarding-secret` will appear. 
+Скопируйте этот файл в папки `~/plugins/plasmovoice/` для каждого из **серверов** за прокси.
 
-Copy this file into the `~/plugins/plasmovoice/` folders for each of the **Servers** behind the proxy.
+Вы также можете использовать переменную окружения `PLASMO_VOICE_FORWARDING_SECRET`. Переменная окружения имеет более высокий приоритет, чем файл.
 
-You can also use the `PLASMO_VOICE_FORWARDING_SECRET` environment variable. The environment variable has a higher priority than the file. 
+Перезапустите каждый **сервер** после указания **Секрета переадресации**.
 
-Restart each **Server** after specifying the **Forwarding Secret**.
+### Настройка хоста
 
-### Configuring Host
+Единственный UDP-порт, который должен быть публичным, это тот, который вы задали в конфигурации плагина **Прокси**.
 
-The only UDP port that is required to be public, is the one that you've set in the **Proxy** plugin configuration.
+Если вы хотите использовать [DDoS Protection](/ru/docs/server/udp-proxy/), то конфигурация хоста **Proxy** является той, которую вам нужно защитить.
 
-If you want to use [DDoS Protection](/docs/server/udp-proxy/), then the **Proxy** host configuration is the one you need to protect.
+Порты, которые используются плагином **Server** для запуска **Voice Server**, нужны только для связи с **Proxy**. Вам не нужно открывать их для публичного доступа.
 
-The ports that are used by the **Server** plugin to start a **Voice Server** are only needed to communicate with the **Proxy**. You don't need to expose them to the public.
+Если **Сервер** и **Прокси** находятся на одной **Ноде**, то вам не нужно ничего делать.
 
-If the **Server** and the **Proxy** are on the same **Node**, then you don't have to do anything. 
-
-If the **Server** and the **Proxy** are running on different **Nodes**, then you may want to configure your firewall in a way that the **Node** of the **Server** will only allow UDP traffic from the **Node** of the **Proxy**.
-
+Если **Server** и **Proxy** работают на разных **Нодах**, то вы можете настроить свой брандмауэр таким образом, чтобы **Нода** **Сервера** разрешала только UDP трафик от **Ноды** **Прокси**.
 

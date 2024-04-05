@@ -20,7 +20,7 @@ export const ru = defineConfig({
                 items: [
                     { text: 'Установка на сервер', link: '/ru/docs/server/installing/' },
                     { text: 'Расширенная теория', link: '/ru/docs/server/advanced/' },
-                    { text: 'Установка на сервер', link: '/ru/docs/server/proxy/' },
+                    { text: 'Установка на прокси', link: '/ru/docs/server/proxy/' },
                     { text: 'Установка ДДоС защиты', link: '/ru/docs/server/udp-proxy/' },
                     { text: 'Команды и разрешения', link: '/ru/docs/server/commands/' },
                     { text: 'Placeholder API', link: '/ru/docs/server/papi/' },

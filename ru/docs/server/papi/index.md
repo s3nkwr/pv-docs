@@ -1,63 +1,63 @@
-# Placoholder API
+# Placeholder API
 
 [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) is a plugin for Spigot servers that allows server owners to display information from various plugins with a uniform format.
 
-## Player placeholders
+## Плейсхолдеры игрока
 
 ### %plasmovoice_hasVoiceChat%
 
-`"true"` if the player is connected to the voice chat server
+`"true"` если игрок подключен к войс серверу
 
-`"false"` otherwise
+`"false"` в любых других случаях
 
 ### %plasmovoice_muted%
 
-`"true"` if the player is muted on the server
+`"true"` если игрок замучен на сервере
 
-`"false"` otherwise
+`"false"` в любых других случаях
 
 ### %plasmovoice_microphoneMuted%
 
-`"true"` if the player muted the microphone on the client
+`"true"` если игрок отключил микрофон на клиенте
 
-`"false"` otherwise
+`"false"` в любых других случаях
 
 ### %plasmovoice_voiceDisabled%
 
-`"true"` if the player muted the voice chat audio on the client
+`"true"` если игрок отключил звук голосового чата на клиенте
 
-`"false"` otherwise
+`"false"` в любых других случаях
 
-## Other placeholders
+## Другие плейсхолдеры
 
 ### %plasmovoice_players%
 
-The number of players with the mod installed
+Количество игроков, у которых установлен мод
 
-## Custom Placeholders
+## Кастомные плейсхолдеры (JS)
 
-It's likely that you won't make use of the `"true"` or `"false"` values by themselves.
+Скорее всего, вы не будете использовать значения `"true"` или `"false"` сами по себе.
 
-Instead, you want to use it to create a custom Placeholder using PAPI's Javascript addon.
+Вместо этого вы захотите использовать их для создания своего Плейсхолдера с помощью Javascript-аддона PAPI.
 
-This example shows you how to create an icon that will change depending on if the player has Plasmo Voice installed or not. 
+В этом примере показано, как создать значок, который будет меняться в зависимости от того, установлен ли в плеере Plasmo Voice или нет.
 
-> Credit to **anomouse** on Plasmo R&D Discord for making the tutorial, and **KPidS** for translating and editing.
+> Спасибо **anomouse** в Plasmo R&D Discord за туториал, и **KPidS** за перевод и редактирование.
 
 ![image](/docs/server/papi/example.png)
 
-### 1. Download the Javascript extension for PlaceholderAPI
+### 1. Загрузите расширение Javascript для PlaceholderAPI
 
 ```
 /papi ecloud download Javascript
 /papi reload
 ```
 
-### 2. Create a script
+### 2. Создайте скрипт
 
-Go to `/plugins/PlaceholderAPI/javascripts/` and create a file called `check_voice.js`.
+Перейдите в раздел `/plugins/PlaceholderAPI/javascripts/` и создайте файл `check_voice.js`.
 
-Paste this code into the file. You can also customize the icons.
+Вставьте этот код в файл. Вы также можете настроить иконки.
 
 ```js
 var placeholder = "%plasmovoice_installed%";
@@ -70,24 +70,60 @@ var checkVoice = function (voice) {
 checkVoice(voice);
 ```
 
-### 3. Import the script you created
-Go to `/plugins/PlaceholderAPI/` folder and open `javascript_placeholders.yml` file
+### 3. Импортируйте созданный вами скрипт
 
-Scroll to the bottom of the file and add these lines:
+Перейдите в папку `/plugins/PlaceholderAPI/` и откройте файл `javascript_placeholders.yml`.
+
+Прокрутите файл до самого низа и добавьте эти строки:
 
 ```yml
 check_voice:
   file: check_voice.js
 ```
 
-### 4. Reload Placeholder API
+### 4. Перезагрузите Placeholder API
 
 ```
 /papi reload
 ```
 
-### 5. Use the placeholder you created
+### 5. Используйте плейсхолдер
 
 ```
 %javascript_check_voice%
+```
+
+## Кастомные плейсхолдеры (TAB)
+
+Есть способ сделать все легче через плагин TAB.
+
+### 1. Найти строчку 
+
+Для начала надо найти строчку `placeholder-output-replacements`.
+
+### 2. Вставить конфиг
+
+*TODO: Сделать больше текста*
+
+```yml
+placeholder-output-replacements:
+  "%plasmovoice_installed%":
+    "true": " &a●&f | "
+    "false": " &c●&f | "
+```
+
+### 3. Перезагрузить TAB
+
+```js
+/tab reload
+```
+
+### 4. Используйте плейсхолдер
+
+В самом TAB можно использовать `%plasmovoice_installed%`. Просто вставьте его в конфиг TAB.
+
+Для всех других плагинов он будет таким:
+
+```
+%tab_replace_plasmovoice_installed%
 ```

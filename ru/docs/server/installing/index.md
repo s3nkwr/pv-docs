@@ -1,83 +1,83 @@
-# Installing on a Server
+# Установка на сервер
 
-Most of the time Plasmo Voice should work out of the box.
+В большинстве случаях Plasmo Voice должен работать из коробки.
 
-If it doesn't, then read this guide to figure out why.
+Если это не так, прочитайте эту статью, чтобы выяснить почему.
 
-## Requirments
+## Требования
 
-### DDoS Protection
+### Защита от ДДоС
 
-By default, Plasmo Voice won't work with TCP Shield, NeoProtect, or a similar proxy service.
+По умолчанию Plasmo Voice не работает с TCP Shield, NeoProtect или аналогичным прокси-сервисом.
 
-It's still possible to make it work, but you need to set up a separate UDP Proxy.
+Это все еще возможно заставить его работать, но вам нужно настроить отдельный UDP Прокси.
 
-Read: [DDoS Protection Setup]()
+Прочитайте: [DDoS Protection Setup](/ru/docs/server/udp-proxy/)
 
-### UDP Ports
+### UDP Порты
 
-You need a server with open `UDP` ports.
+Вам нужен сервер с открытыми портами `UDP`.
 
-`UDP` is a network protocol used by Plasmo Voice, as opposed to `TCP` used by a Minecraft server. 
+`UDP` - это сетевой протокол, используемый Plasmo Voice, в отличие от `TCP`, используемого сервером Minecraft.
 
-`UDP` and `TCP` ports are different.
+Порты `UDP` и `TCP` отличаются друг от друга.
 
-For example, you can have a `25565 TCP` port open, and your Minecraft server will work just fine.
+Например, у вас может быть открыт `25565 TCP` порт, и ваш сервер Minecraft будет работать просто отлично.
 
-But your `25565 UDP` port may be closed. Plasmo Voice will not work because of that.
+Но UDP-порт `25565` может быть закрыт. Из-за этого Plasmo Voice не будет работать.
 
-Because the ports are different, it also means that you can use a `25565 TCP` for your Minecraft server and `25565 UDP` for the voice chat server. The ports won't conflict.
+Поскольку порты разные, это также означает, что вы можете использовать `25565 TCP` для вашего сервера Minecraft и `25565 UDP` для сервера голосового чата. Порты не будут конфликтовать.
 
-### Using a Minecraft hosting provider
+### Использование хостинга для Minecraft
 
-Usually, your main port will be available as both `UDP` and `TCP` ports. Sometimes you will need to create an additional port and use it instead.
+Обычно ваш основной порт будет доступен как `UDP`, так и `TCP`. Иногда вам нужно будет создать дополнительный порт и использовать его вместо основного.
 
-Look through your hosting documentation to find info about `UDP` ports or guides on how to install a voice chat mod. 
+Просмотрите документацию по хостингу, чтобы найти информацию о портах `UDP` или руководства по установке мода голосового чата.
 
-If you can't find anything, and you are struggling with installation, then ask the hosting support for help. 
+Если вы ничего не нашли, и у вас возникают трудности с установкой, обратитесь за помощью в службу поддержки хостинга.
 
-### Hosting on your PC
+### Хостинг на вашем ПК
 
-Opening a `UDP` port is the same as opening a `TCP` port.
+Открытие порта `UDP` - это то же самое, что и открытие порта `TCP`.
 
-When you open a port in the firewall or router settings —  you can choose a protocol.
+Когда вы открываете порт в настройках брандмауэра или маршрутизатора, вы можете выбрать протокол.
 
-Just make sure to open both `UDP` and `TCP`.
+Просто убедитесь, что вы открыли и `UDP`, и `TCP`.
 
-### Bungee or Velocity
+### Bungee или Velocity
 
-Read: [Installing on a Proxy](/docs/server/proxy/) 
+Прочитайте: [Установка на Прокси](/ru/docs/server/proxy/) 
 
-## Install the Client mod
+## Установите клиентский мод
 
-You need to install a [Forge or a Fabric mod](https://modrinth.com/mod/plasmo-voice) on your client for the voice chat to work. Players without the mod are still able to join and play as usual.
+Чтобы голосовой чат работал, вам необходимо установить [Forge или Fabric mod](https://modrinth.com/mod/plasmo-voice) на свой клиент. Игроки без мода могут присоединиться и играть как обычно.
 
-Paper, Fabric, and Forge servers are all compatible with both Fabric and Forge clients.
+Серверы Paper, Fabric и Forge совместимы с клиентами Fabric и Forge.
 
 ![](https://imgur.com/dxgaWJ2.png)
 
-*Assuming Plasmo Voice is installed on both client and the server.*
+*Предполагается, что Plasmo Voice установлен как на клиенте, так и на сервере*
 
-## Installation
+## Установка
 
-1. Download a plugin or a mod from [Modrinth](https://modrinth.com/mod/plasmo-voice).
-2. Install the mod or the plugin
-   - For Paper, install the plugin in `~/plugins/`.
-   - For Fabric or Forge, install the mod in `~/mods/`.
-3. Restart the server.
-4. Join the server.
-5. Press `V` to open the voice chat menu.
+1. Скачайте плагин или мод с сайта [Modrinth](https://modrinth.com/mod/plasmo-voice).
+2. Установите мод или плагин.
+   - Для Paper установите плагин в папку `~/plugins/`.
+   - Для Fabric или Forge установите мод в `~/mods/`.
+3. Перезапустите сервер.
+4. Присоединитесь к серверу.
+5. Нажмите `V`, чтобы открыть меню голосового чата.
 
-If you see the menu, then the plugin works.
+Если вы видите меню, то плагин работает.
 
-If it says `Connecting...`, `Can't connect`, or `Not installed` then continue with the next step.
+Если появится надпись `Connecting...`, `Can't connect` или `Not installed`, перейдите к следующему шагу.
 
-## Edit the config
+## Редактирование конфига
 
-- Config location on Fabric and Forge: `~/config/plasmovoice/config.toml`
-- Config location on Paper: `~/plugins/PlasmoVoice/config.toml`
+- Расположение конфига на Fabric и Forge: `~/config/plasmovoice/config.toml`
+- Расположение конфига на Paper: `~/plugins/PlasmoVoice/config.toml`
 
-There are two values in the config that you can try to change if Plasmo Voice doesn't work: `ip` and `port`
+Есть два значения в конфиге, которые вы можете попробовать изменить, если Plasmo Voice не работает: `ip` и `port`.
 
 ```toml
 # Default values
@@ -86,27 +86,26 @@ ip = "0.0.0.0"
 port = 0
 ```
 
-### IP 
+### IP
 
-The value of the `ip` will be used as a **Bind Address** that Plasmo Voice will try to launch the voice server on.
+Значение `ip` будет использоваться в качестве **Адреса привязки**, по которому Plasmo Voice будет пытаться запустить голосовой сервер.
 
-If it's set to `0.0.0.0`, then Plasmo Voice will try to get the IP of the server that it's running on.
+Если установлено значение `0.0.0.0`, то Plasmo Voice будет пытаться получить IP сервера, на котором он запущен.
 
-Problems with the default bind address might occur if there are multiple addresses on the server. It's common with Minecraft-specific hosting providers.
+Проблемы с привязкой адреса по умолчанию могут возникнуть, если на сервере несколько адресов. Такое часто случается с хостинг-провайдерами, специализирующимися на Minecraft.
 
-If you think that this might be the problem, contact the support of your hosting and ask them to help you.
+Если вы считаете, что проблема может быть в этом, обратитесь в службу поддержки вашего хостинга и попросите их помочь вам.
 
-### Port
+### Порт
 
-The default port is set to `0`. It means that Plasmo Voice will use the same port as your Minecraft server.
+По умолчанию установлен порт `0`. Это означает, что Plasmo Voice будет использовать тот же порт, что и ваш сервер Minecraft.
 
-If your Minecraft server is running on `25565 TCP`, the **Voice Server** will be launched on `25565 UDP`.
+Если ваш сервер Minecraft работает на `25565 TCP`, то **Voice Server** будет запущен на `25565 UDP`.
 
-We already explained all you need to know about ports. If you skipped it, go back and read it. You can change this value to any other port you want Plasmo Voice to use.
+Мы уже объяснили все, что вам нужно знать о портах. Если вы пропустили это, вернитесь и прочитайте. Вы можете изменить это значение на любой другой порт, который вы хотите, чтобы Plasmo Voice использовал.
 
+## Обычные проблемы
 
-## Common problems
+`java.net.BindException: Address already in use` Порт уже используется, вам следует выбрать другой порт.
 
-`java.net.BindException: Address already in use` Port is already in use, you should choose a different port.
-
-`java.net.BindException: Cannot assign requested address` Can't access **Bind Adress** that is specified in the config. Change it to `0.0.0.0` or your local IP address.
+`java.net.BindException: Cannot assign requested address` Не удается получить доступ к **Адресу привязки**, указанному в конфиге. Измените его на `0.0.0.0` или ваш локальный IP-адрес.

@@ -1,16 +1,16 @@
-# Advanced Theory
+# Продвинутая теория
 
-## Terminology
+## Терминология
 
-- **Node** — a virtual or dedicated server that can host servers and proxies. Has an IP address.
-- **Proxy** — a Velocity or Bungee instance running on a **Node**.
-- **UDP Proxy** — A separate proxy server used to forward UDP traffic.
-- **Server (Game Server)** — a Paper server running on a **Node**.
-- **Voice Server** — an instance of **Voice Server** is launched by a Plasmo Voice plugin on a **Game Server**.
+- **Нода** — виртуальный или выделенный сервер, на котором могут размещаться серверы и прокси-серверы. Имеет IP-адрес.
+- **Прокси** — прокси Velocity или Bungee, работающий на **Ноде**.
+- **UDP Прокси** — отдельный прокси-сервер, используемый для перенаправления UDP-трафика.
+- **Сервер (Игровой сервер)** — сервер Paper, работающий на **Ноде**.
+- **Войс Сервер** — экземпляр **Войс Сервера** запущенный плагином Plasmo Voice на **Игровом сервере**.
 
-## Voice Server Configuration
+## Конфигурация войс сервера
 
-By default, the plugin config is configured like this:
+По умолчанию конфигурация плагина настроена следующим образом:
 
 ```toml
 [host]
@@ -18,25 +18,25 @@ ip = "0.0.0.0"
 port = 0
 ```
 
-**IP is used for 2 different purposes:**
+**IP используется для двух различных целей:**.
 
-- **Bind Address** — The IP that the plugin will use to start a voice server. Should always be the IP of the **Node** that you run the server on.
-    - The default value of `0.0.0.0` means that the IP will be inferred from the IP of the **Node** it is running on. Most of the time you don't need to change it.
-- **Public Address** — The IP that the player will connect to.
-    - The default value of `0.0.0.0` means that the player will try to connect to the same IP used to connect to a **Game Server** or **Proxy**. That is when problems may arise.
-    - You can change the **Public Address** using `[host.public]`
+- **Адрес привязки** - IP, который плагин будет использовать для запуска голосового сервера. Это всегда должен быть IP **узла**, на котором запущен сервер.
+  - Значение по умолчанию `0.0.0.0` означает, что IP будет выведен из IP **ноды**, на которой он запущен. В большинстве случаев менять его не нужно.
+- **Публичный адрес** - IP, к которому будет подключаться игрок.
+  - Значение по умолчанию `0.0.0.0` означает, что игрок будет пытаться подключиться к тому же IP, который используется для подключения к **Игровому серверу** или **Прокси**. В этом случае могут возникнуть проблемы.
+  - Вы можете изменить **публичный адрес** с помощью команды `[host.public]`.
 
-If the port is set to 0 then the **Voice Server** will use the port of the **Server**.
+Если порт установлен в 0, то **Войс сервер** будет использовать порт **Сервера**.
 
-So, if the IP of your node is `111.1.111.111`
+Итак, если IP-адрес вашего узла - `111.1.111.111`.
 
-And your `server.properties` looks like this:
+И ваш `server.properties` выглядит следующим образом:
 
 ```properties
 server-port=25565
 ```
 
-The default config will be equivalent to this:
+Конфигурация по умолчанию будет выглядеть так:
 
 ```toml
 [host]
@@ -44,28 +44,28 @@ ip = "111.1.111.111"
 port = 25565
 ```
 
-## Example
+## Пример
 
-Lets say we have a **Node A**: `111.1.111.111` and **Node B**: `222.2.222.222`
+Допустим, у нас есть **Нода A**: `111.1.111.111` и **Нода B**: `222.2.222.222`
 
-**Node A** is hosting:
+Сервера на **Ноде A**:
 
-- **Proxy** `111.1.111.111:1000`.
-- **Server A** `111.1.111.111:1001`.
+- **Прокси** `111.1.111.111:1000`.
+- **Сервер A** `111.1.111.111:1001`.
 
-**Node B** is hosting:
+Сервера на **Ноде B**:
 
-- **Server B** `222.2.222.222:2000`.
+- **Сервер B** `222.2.222.222:2000`.
 
-With default configuration player will connect to a server via the **Proxy** IP `111.1.111.111:1000`.
+При конфигурации по умолчанию игрок будет подключаться к серверу через **Прокси** с IP-адресом `111.1.111.111:1000`.
 
-When the player connects to **Server B** it will then try to establish a connection with a **Voice Server** using the same IP it used to connect to a **Proxy**.
+Когда игрок подключится к **Серверу B**, он попытается установить соединение с **Войс сервером**, используя тот же IP, который он использовал для подключения к **Прокси**.
 
-With the default setting this means that the player will try to connect to a **Voice Chat** sever on `111.1.111.111:1000`
+При настройках по умолчанию это означает, что игрок попытается подключиться к **Войс серверу** на `111.1.111.111:1000`.
 
-Uh oh, this is a problem. The **Voice Server** is actually running on `222.2.222.222:2000`
+Но, это проблема. Так как на самом деле **Войс сервер** работает на `222.2.222.222:2000`.
 
-Luckily this problem can be fixed by changing the **Public Address** in the Plasmo Voice config on the **Server**.
+К счастью, эту проблему можно решить, изменив **Публичный адрес** в конфигурации Plasmo Voice на **Сервере**.
 
 ```toml
 [host]
