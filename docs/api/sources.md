@@ -60,6 +60,21 @@ To change a group of players, use [ServerBroadcastSource#setPlayers](https://dok
 <<< @/snippets/api/sources/broadcast.kt{kotlin} [kotlin]
 :::
 
+## Player activation info
+By default, the player sending audio to the activation doesn't know the destination source.<br>
+So, when handling activation and sending audio to the source,
+you should add [PlayerActivationInfo](https://dokka.plasmovoice.com/-plasmo-voice/su.plo.voice.api.server.audio.capture/-player-activation-info/index.html)
+in [BaseServerDirectSource](https://dokka.plasmovoice.com/-plasmo-voice/su.plo.voice.api.server.audio.source/-base-server-direct-source/index.html?query=interface%20BaseServerDirectSource%20:%20ServerAudioSource%3CDirectSourceInfo%3E#-1502671345%2FFunctions%2F1633478633)
+or [ServerProximitySource](https://dokka.plasmovoice.com/-plasmo-voice/su.plo.voice.api.server.audio.source/-server-proximity-source/index.html#-1259569937%2FFunctions%2F1633478633).
+
+With that, addons like [pv-addon-replaymod](https://modrinth.com/mod/pv-addon-replaymod)
+will know to which source the current activation is being sent.
+
+::: code-group
+<<< @/snippets/api/sources/player-activation-info.java{9} [java]
+<<< @/snippets/api/sources/player-activation-info.kt{9 kotlin} [kotlin]
+:::
+
 ## Audio sender
 
 ### ArrayAudioFrameProvider
