@@ -4,7 +4,7 @@ Most of the time Plasmo Voice should work out of the box.
 
 If it doesn't, then read this guide to figure out why.
 
-## Requirments
+## Requirements
 
 ### DDoS Protection
 
