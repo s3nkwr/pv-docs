@@ -2,6 +2,10 @@
     <repositories>
         <repository>
             <id>plasmoverse-releases</id>
+            <url>https://repo.plasmoverse.com/releases</url>
+        </repository>
+        <repository>
+            <id>plasmoverse-snapshots</id>
             <url>https://repo.plasmoverse.com/snapshots</url>
         </repository>
     </repositories>

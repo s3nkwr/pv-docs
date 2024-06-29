@@ -1,4 +1,5 @@
 repositories {
+    maven("https://repo.plasmoverse.com/releases")
     maven("https://repo.plasmoverse.com/snapshots")
 }
 
