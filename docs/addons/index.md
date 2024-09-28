@@ -28,6 +28,21 @@ A fork of Replay Voice Chat that works with Plasmo Voice allowing you to record 
 
 [Modrinth](https://modrinth.com/mod/pv-addon-replaymod/)
 
+---
+
+[![Talking Heads](/addon_logo/talking_heads.png)](https://modrinth.com/mod/talkingheads/)
+
+### Talking Heads
+
+This add-on scales player heads when they’re talking.
+
+::: warning Third party add-on.
+This add-on is maintained by a third party, so if you encounter any issues,
+please report them on the [Talking Heads GitHub](https://github.com/ZipeStudio/TalkingHeads).
+:::
+
+[Modrinth](https://modrinth.com/mod/talkingheads/)
+
 ## Universal
 
 ---
