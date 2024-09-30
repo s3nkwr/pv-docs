@@ -96,9 +96,14 @@ IP and ports usually match too, but they can be different if you configured it t
 
 In the `~/plugins/plasmovoice` folder of the **Proxy** a file called `forwarding-secret` will appear. 
 
-Copy this file into the `~/plugins/plasmovoice/` folders for each of the **Servers** behind the proxy.
+Copy this file into the `~/plugins/plasmovoice/` (or `~/config/plasmovoice/server/` for Fabric/Forge/NeoForge)
+folders for each of the **Servers** behind the proxy.
 
-You can also use the `PLASMO_VOICE_FORWARDING_SECRET` environment variable. The environment variable has a higher priority than the file. 
+You can change `forwarding-secret` file location using
+`PLASMO_VOICE_FORWARDING_SECRET_FILE` environment variable.
+
+You can also use the `PLASMO_VOICE_FORWARDING_SECRET` environment variable.
+The environment variable has a higher priority than the file. 
 
 Restart each **Server** after specifying the **Forwarding Secret**.
 
