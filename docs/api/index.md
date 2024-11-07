@@ -4,7 +4,7 @@ outline: deep
 
 [//]: # (# Getting Started)
 ::: warning
-The API documentation is a work in progress and is based on [2.1.0-SNAPSHOT](https://github.com/plasmoapp/plasmo-voice/releases/tag/2.1.0-SNAPSHOT).
+The API documentation is WIP and requires [2.1.x Alpha](https://modrinth.com/plugin/plasmo-voice/versions?c=alpha).
 :::
 
 ## Setting up dependency
