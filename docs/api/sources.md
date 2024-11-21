@@ -30,12 +30,20 @@ Entity sources are attached to the entities.
 :::
 
 ### Player source
-Player sources are attached to the players.
+Player source is attached to the player, audio will be played at a certain distance around the player.
 
 ::: code-group
 <<< @/snippets/api/sources/player.java [java]
 <<< @/snippets/api/sources/player.kt{kotlin} [kotlin]
 :::
+
+By default, the player attached to the source can't hear the audio.
+If you want to override this behaviour, you need to remove the first source filter:
+::: code-group
+<<< @/snippets/api/sources/player-remove-filter.java [java]
+<<< @/snippets/api/sources/player-remove-filter.kt{kotlin} [kotlin]
+:::
+You can also remove all filters, but beware that vanish support won't work for this source.
 
 ### Direct source
 Direct sources are attached to a specific player and can only be heard by that player.
