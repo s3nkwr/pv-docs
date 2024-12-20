@@ -25,5 +25,11 @@
             "aliases": []
         }
     ],
-    "patrons": []
+    "patrons": [
+        {
+            "uuid": "e7d9db44-3268-4409-9777-0227f7390fbd",
+            "name": "Binero",
+            "tier": "Iron"
+        }
+    ]
 }
