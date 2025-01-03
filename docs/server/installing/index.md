@@ -12,7 +12,7 @@ By default, Plasmo Voice won't work with TCP Shield, NeoProtect, or a similar pr
 
 It's still possible to make it work, but you need to set up a separate UDP Proxy.
 
-Read: [DDoS Protection Setup]()
+Read: [DDoS Protection Setup](/docs/server/udp-proxy/)
 
 ### UDP Ports
 
